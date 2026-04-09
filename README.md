@@ -1,6 +1,6 @@
 # ai-dev-utils
 
-A curated marketplace of developer utility plugins for [Claude Code](https://code.claude.com/).
+A curated marketplace of developer utility plugins for [Claude Code](https://code.claude.com/) and [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli).
 
 ## Available Plugins
 
@@ -10,31 +10,21 @@ A curated marketplace of developer utility plugins for [Claude Code](https://cod
 
 ## Installation
 
-### 1. Add the marketplace
+### Claude Code
+
+#### 1. Add the marketplace
 
 ```bash
 claude plugin marketplace add ismaelJimenez/ai-dev-utils
 ```
 
-Or from within Claude Code:
-
-```
-/plugin marketplace add ismaelJimenez/ai-dev-utils
-```
-
-### 2. Install a plugin
+#### 2. Install a plugin
 
 ```bash
 claude plugin install feature@ai-dev-utils
 ```
 
-Or from within Claude Code:
-
-```
-/plugin install feature@ai-dev-utils
-```
-
-### 3. Use it
+#### 3. Use it
 
 ```
 /feature:brainstorm
@@ -42,12 +32,48 @@ Or from within Claude Code:
 
 Then describe the idea you want to explore. The skill guides the conversation from there.
 
-## Updating
+### GitHub Copilot CLI
 
-To get the latest plugin versions:
+#### 1. Add the marketplace
+
+```bash
+copilot plugin marketplace add ismaelJimenez/ai-dev-utils
+```
+
+#### 2. Install a plugin
+
+```bash
+copilot plugin install feature@ai-dev-utils
+```
+
+#### 3. Use it
 
 ```
-/plugin marketplace update ai-dev-utils
+/feature:brainstorm
+```
+
+For more details, see [Finding and installing plugins for GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing).
+
+## Updating
+
+**Refresh the marketplace catalog:**
+
+```bash
+# Claude Code
+claude plugin marketplace update ai-dev-utils
+
+# Copilot CLI (re-add to refresh)
+copilot plugin marketplace remove ai-dev-utils && copilot plugin marketplace add ismaelJimenez/ai-dev-utils
+```
+
+**Update an installed plugin to the latest version:**
+
+```bash
+# Claude Code
+claude plugin update feature
+
+# Copilot CLI
+copilot plugin update feature
 ```
 
 ## License
