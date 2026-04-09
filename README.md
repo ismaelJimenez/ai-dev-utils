@@ -7,6 +7,7 @@ A curated marketplace of developer utility plugins for [Claude Code](https://cod
 | Plugin | Description | Version |
 |--------|-------------|---------|
 | [feature](https://github.com/ismaelJimenez/feature) | A utility suite for developing new features with structured workflows | 0.0.1 |
+| [superpowers](https://github.com/obra/superpowers) | A complete software development workflow for coding agents, built on composable skills covering TDD, brainstorming, planning, subagent-driven development, debugging, and code review | 5.0.7 |
 
 ## Installation
 
