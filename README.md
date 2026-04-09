@@ -55,6 +55,16 @@ For more details, see [Finding and installing plugins for GitHub Copilot CLI](ht
 
 ## Managing Plugins
 
+**Browse available plugins in the marketplace:**
+
+```bash
+# Claude Code
+claude plugin marketplace list ai-dev-utils
+
+# Copilot CLI
+copilot plugin marketplace list ai-dev-utils
+```
+
 **Refresh the marketplace catalog (picks up newly added or updated plugins):**
 
 ```bash
