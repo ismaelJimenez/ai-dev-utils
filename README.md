@@ -1,133 +1,190 @@
-# ai-dev-utils
+# ai-dev-marketplace
 
-A curated marketplace of developer utility plugins for [Claude Code](https://code.claude.com/) and [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Marketplace](https://img.shields.io/badge/Marketplace-Active-brightgreen)](https://github.com/ismaelJimenez/ai-dev-marketplace)
 
-## Available Plugins
+🚀 A curated marketplace of developer utility plugins for [Claude Code](https://code.claude.com/) and [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli).
 
-| Plugin | Description | Version |
-|--------|-------------|---------|
-| [feature](https://github.com/ismaelJimenez/feature) | A utility suite for developing new features with structured workflows | 0.0.1 |
-| [superpowers](https://github.com/obra/superpowers) | A complete software development workflow for coding agents, built on composable skills covering TDD, brainstorming, planning, subagent-driven development, debugging, and code review | 5.0.7 |
 
-## Installation
+## ✨ Overview
+
+**ai-dev-marketplace** provides a collection of hand-picked, production-ready plugins that supercharge your AI-powered development workflow. Whether you're using Claude Code or GitHub Copilot CLI, these plugins extend capabilities with powerful features for brainstorming, planning, testing, debugging, and code review.
+
+## 📦 Available Plugins
+
+| Plugin | Description | Version | Category |
+|--------|-------------|---------|----------|
+| [**wingman**](https://github.com/ismaelJimenez/wingman) | Structured workflows for developing new features with brainstorming, ideation, and decision-making | 0.2.1 | Productivity |
+| [**superpowers**](https://github.com/obra/superpowers) | Complete software development workflow covering TDD, planning, debugging, code review, and subagent-driven development | 5.0.7 | Productivity |
+
+### ⚡ Key Features
+
+- **🎯 Feature Development** - Structured ideation and feature planning workflows
+- **🛠️ Advanced Development** - Complete workflow automation with TDD and code review
+- **🤖 AI-First Design** - Built specifically for Claude Code and Copilot CLI
+- **📦 Easy Installation** - One-command marketplace setup
+- **🔄 Auto-Updates** - Automatic plugin updates available
+
+## 🚀 Quick Start
 
 ### Claude Code
-
-#### 1. Add the marketplace
-
 ```bash
-claude plugin marketplace add ismaelJimenez/ai-dev-utils
-```
-
-#### 2. Install a plugin
-
-```bash
-claude plugin install feature@ai-dev-utils
+claude plugin marketplace add ismaelJimenez/ai-dev-marketplace
+claude plugin install wingman@ai-dev-marketplace
 ```
 
 ### GitHub Copilot CLI
-
-#### 1. Add the marketplace
-
 ```bash
-copilot plugin marketplace add ismaelJimenez/ai-dev-utils
+copilot plugin marketplace add ismaelJimenez/ai-dev-marketplace
+copilot plugin install wingman@ai-dev-marketplace
 ```
 
-#### 2. Install a plugin
+
+## 📖 Installation
+
+### For Claude Code
+
+#### Step 1: Add the marketplace
 
 ```bash
-copilot plugin install feature@ai-dev-utils
+claude plugin marketplace add ismaelJimenez/ai-dev-marketplace
 ```
 
-### Verify the installation
+#### Step 2: Install a plugin
+
+```bash
+claude plugin install wingman@ai-dev-marketplace
+```
+
+### For GitHub Copilot CLI
+
+#### Step 1: Add the marketplace
+
+```bash
+copilot plugin marketplace add ismaelJimenez/ai-dev-marketplace
+```
+
+#### Step 2: Install a plugin
+
+```bash
+copilot plugin install wingman@ai-dev-marketplace
+```
+
+#### Step 3: Verify the installation
 
 ```bash
 copilot plugin list
 ```
 
-#### Use it
+#### Step 4: Use it
 
 ```
-/feature:brainstorm
+/wingman:brainstorm
 ```
 
-For more details, see [Finding and installing plugins for GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing).
+For more details, see [GitHub Copilot CLI plugins documentation](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing).
 
-## Managing Plugins
+### For VS Code Copilot Chat
 
-**Browse available plugins in the marketplace:**
+1. **Enable the feature:** Settings → search `chat.plugins.enabled` → check the box
+2. **Add the marketplace** to your `settings.json`:
+   ```json
+   {
+     "chat.plugins.marketplaces": [
+       "ismaelJimenez/ai-dev-marketplace"
+     ]
+   }
+   ```
+3. **Browse and install:** Open Extensions (`⇧⌘X` / `Ctrl+Shift+X`), search `@agentPlugins`, find the plugin, and select **Install**
+4. **Use:** Type `/` in Copilot Chat to see available skills
 
+> **Note:** In VS Code Copilot Chat, use skill names directly (e.g., `/brainstorm`) — the `plugin:skill` prefix is not needed.
+
+Alternatively, install directly from source:
+- Run **Chat: Install Plugin From Source** from the Command Palette and enter the plugin's Git URL
+
+## 🔧 Managing Plugins
+
+### Browse & Update
+
+**Browse available plugins:**
 ```bash
 # Claude Code
-claude plugin marketplace browse ai-dev-utils
+claude plugin marketplace browse ai-dev-marketplace
 
 # Copilot CLI
-copilot plugin marketplace browse ai-dev-utils
+copilot plugin marketplace browse ai-dev-marketplace
 ```
 
-**Refresh the marketplace catalog (picks up newly added or updated plugins):**
-
+**Refresh the marketplace catalog** (picks up newly added or updated plugins):
 ```bash
 # Claude Code
-claude plugin marketplace update ai-dev-utils
+claude plugin marketplace update ai-dev-marketplace
 
 # Copilot CLI (re-add to refresh)
-copilot plugin marketplace remove ai-dev-utils
-copilot plugin marketplace add ismaelJimenez/ai-dev-utils
+copilot plugin marketplace remove ai-dev-marketplace
+copilot plugin marketplace add ismaelJimenez/ai-dev-marketplace
 ```
 
-**Update an installed plugin to the latest version:**
+### Update & Remove
 
+**Update an installed plugin to the latest version:**
 ```bash
 copilot plugin update PLUGIN-NAME
 ```
 
 **Remove a plugin:**
-
 ```bash
 copilot plugin uninstall PLUGIN-NAME
 ```
 
-**Remove the marketplace (and all its plugins):**
-
+**Remove the entire marketplace (and all its plugins):**
 ```bash
-copilot plugin marketplace remove ai-dev-utils --force
+copilot plugin marketplace remove ai-dev-marketplace --force
 ```
 
-> Omit `--force` to see which installed plugins would be affected before removing.
+> Tip: Omit `--force` to see which installed plugins would be affected before removing.
 
-## Using Plugins in VS Code Copilot Chat
+### VS Code-Specific Management
 
-Agent plugins in VS Code are currently in preview. For more information, see [Agent plugins in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-plugins) and [Agent Skills in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills).
+- **Enable/disable:** Right-click a plugin in **Agent Plugins - Installed** or toggle in Chat Customizations editor
+- **Update:** Plugin updates are checked automatically every 24 hours (when `extensions.autoUpdate` is enabled). Manually trigger: Command Palette → **Extensions: Check for Extension Updates**
+- **Uninstall:** Right-click the plugin in **Agent Plugins - Installed** view and select **Uninstall**
 
-1. **Enable the feature:** Settings → search `chat.plugins.enabled` → check the box.
-2. **Add the marketplace** to your `settings.json`:
-   ```json
-   "chat.plugins.marketplaces": [
-       "ismaelJimenez/ai-dev-utils"
-   ]
-   ```
-3. **Browse and install:** Open the Extensions view (`⇧⌘X` / `Ctrl+Shift+X`), search `@agentPlugins`, find the plugin you want, and select **Install**.
-4. **Use it:** Type `/` in Copilot Chat to see the skills provided by installed plugins.
+## 🧠 Using Plugins in VS Code Copilot Chat
 
-> **Note:** In VS Code Copilot Chat, slash commands use the skill name directly (e.g. `/brainstorm`) — the `plugin:skill` prefix used in Copilot CLI is not added.
+Agent plugins in VS Code are currently in preview. Learn more:
+- [Agent plugins in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-plugins)
+- [Agent Skills in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
 
-You can also install a single plugin directly without registering the marketplace:
-- Run **Chat: Install Plugin From Source** from the Command Palette and enter the plugin's Git URL.
+## 🤝 Contributing
 
-### Updating plugins
+We welcome contributions! If you've built a plugin you'd like to add to the marketplace:
 
-VS Code checks for plugin updates automatically every 24 hours when `extensions.autoUpdate` is enabled. You can also trigger a manual check:
+1. Ensure your plugin follows the [plugin development guidelines](https://code.visualstudio.com/docs/copilot/customization/agent-plugins)
+2. Push your plugin to a public GitHub repository
+3. Submit a PR to add your plugin to `marketplace.json`
 
-- Open the Command Palette (`⇧⌘P` / `Ctrl+Shift+P`) and run **Extensions: Check for Extension Updates**.
+## 🆘 Support & Troubleshooting
 
-If an update is available, the plugin will show an **Update** button in the **Agent Plugins - Installed** view (Extensions sidebar → `@agentPlugins`).
+### Common Issues
 
-### Managing installed plugins
+**Plugin not appearing after installation?**
+- Try refreshing the marketplace catalog
+- Restart your editor
+- Clear your cache: settings/extensions dialog
 
-- **Enable/disable:** Right-click a plugin in the **Agent Plugins - Installed** section of the Extensions view, or toggle it in the Chat Customizations editor.
-- **Uninstall:** Right-click the plugin in the **Agent Plugins - Installed** view and select **Uninstall**.
+**Commands not working?**
+- Ensure all plugins are enabled in the Extensions view
+- Check that the marketplace was added correctly
+- Verify you're using the correct syntax (no `plugin:` prefix in VS Code)
 
-## License
+### Resources
 
-MIT
+- [Copilot CLI Documentation](https://docs.github.com/en/copilot/how-tos/copilot-cli)
+- [Claude Code Documentation](https://code.claude.com/)
+- [VS Code Copilot Customization](https://code.visualstudio.com/docs/copilot/customization)
+
+## 📄 License
+
+MIT © [Ismael Jimenez](https://github.com/ismaelJimenez)

@@ -1,18 +1,18 @@
 {
-  "name": "ai-dev-utils",
+  "name": "ai-dev-marketplace",
   "owner": {
     "name": "Ismael Jimenez"
   },
   "metadata": {
     "description": "A curated marketplace of developer utility plugins for Claude Code",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "plugins": [
     {
-      "name": "feature",
+      "name": "wingman",
       "source": {
         "source": "github",
-        "repo": "ismaelJimenez/feature"
+        "repo": "ismaelJimenez/wingman"
       },
       "description": "A utility suite for developing new features with structured workflows",
       "version": "0.2.2",
@@ -22,7 +22,7 @@
       "license": "MIT",
       "keywords": ["brainstorming", "ideation", "decision-making", "collaborative"],
       "category": "productivity",
-      "repository": "https://github.com/ismaelJimenez/feature"
+      "repository": "https://github.com/ismaelJimenez/wingman"
     },
     {
       "name": "superpowers",
