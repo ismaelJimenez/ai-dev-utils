@@ -23,6 +23,22 @@
       "keywords": ["brainstorming", "ideation", "decision-making", "collaborative"],
       "category": "productivity",
       "repository": "https://github.com/ismaelJimenez/feature"
+    },
+    {
+      "name": "superpowers",
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers"
+      },
+      "description": "A complete software development workflow for coding agents, built on composable skills covering TDD, brainstorming, planning, subagent-driven development, debugging, and code review",
+      "version": "5.0.7",
+      "author": {
+        "name": "Jesse Vincent"
+      },
+      "license": "MIT",
+      "keywords": ["tdd", "brainstorming", "planning", "debugging", "code-review", "subagent", "workflow", "skills"],
+      "category": "productivity",
+      "repository": "https://github.com/obra/superpowers"
     }
   ]
 }
