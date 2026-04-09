@@ -59,10 +59,10 @@ For more details, see [Finding and installing plugins for GitHub Copilot CLI](ht
 
 ```bash
 # Claude Code
-claude plugin marketplace list ai-dev-utils
+claude plugin marketplace browse ai-dev-utils
 
 # Copilot CLI
-copilot plugin marketplace list ai-dev-utils
+copilot plugin marketplace browse ai-dev-utils
 ```
 
 **Refresh the marketplace catalog (picks up newly added or updated plugins):**
