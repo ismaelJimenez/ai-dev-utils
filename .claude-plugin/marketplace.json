@@ -1,5 +1,5 @@
 {
-  "name": "dev-utils",
+  "name": "ai-dev-utils",
   "owner": {
     "name": "Ismael Jimenez"
   },
@@ -9,20 +9,20 @@
   },
   "plugins": [
     {
-      "name": "brainstorm",
+      "name": "feature",
       "source": {
         "source": "github",
-        "repo": "ismaelJimenez/brainstorm"
+        "repo": "ismaelJimenez/feature"
       },
-      "description": "Turn rough ideas into structured brainstorm documents through collaborative questioning and alternative exploration",
-      "version": "0.0.2",
+      "description": "A utility suite for developing new features with structured workflows",
+      "version": "0.0.1",
       "author": {
         "name": "Ismael Jimenez"
       },
       "license": "MIT",
       "keywords": ["brainstorming", "ideation", "decision-making", "collaborative"],
       "category": "productivity",
-      "repository": "https://github.com/ismaelJimenez/brainstorm"
+      "repository": "https://github.com/ismaelJimenez/feature"
     }
   ]
 }
