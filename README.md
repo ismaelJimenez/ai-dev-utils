@@ -14,7 +14,7 @@
 
 | Plugin | Description | Version | Category |
 |--------|-------------|---------|----------|
-| [**wingman**](https://github.com/ismaelJimenez/wingman) | Structured workflows for developing new features with brainstorming, ideation, and decision-making | 0.2.1 | Productivity |
+| [**wingman**](https://github.com/ismaelJimenez/wingman) | Structured workflows for developing new features with brainstorming, ideation, and decision-making | 0.3.0 | Productivity |
 | [**superpowers**](https://github.com/obra/superpowers) | Complete software development workflow covering TDD, planning, debugging, code review, and subagent-driven development | 5.0.7 | Productivity |
 
 ### ⚡ Key Features
